@@ -1,0 +1,40 @@
+
+<html>
+    <body>
+        <header class="header">
+        </header>
+
+        <div class="container">
+            <div class="search" *ngIf = "filters.length > 0">
+                <div class="search_content" >
+                    <div class="close-tag" *ngFor="let filter of filters ; let i = index">
+                    <span>{{filter}}</span>
+                    <button (click)="delfilter(i)"> X </button>
+                </div>
+                </div>
+                <div class="search_clear">
+                        <button (click)="clearFilter()">Clear</button>
+                </div>
+            </div>
+            <div class="jobs" *ngFor="let item of Clist | rolefilter : filters">
+                    <div class="jobs_column jobs_column-left">
+                        <img src="../../assets/{{item.logo}}" alt="Photosnap" class="jobs_img"/>
+                        <div class="jobs_info">
+                            <span class="jobs_company">{{item.company}}</span>
+                            <span class="jobs_title">{{item.position}}</span>
+                            <ul class="jobs_details">
+                                <li class="jobs_details_item">{{item.postedAt}}</li>
+                                <li class="jobs_details_item">{{item.contract}}</li>
+                                <li class="jobs_details_item">{{item.location}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="search_tags">
+                        <div> <button (click) = "addFilter(item.role , 'role')"> {{item.role}} </button> <button (click) = "addFilter(item.level , 'level')"> {{item.level}} </button> 
+                            <button *ngFor="let language of item.languages" (click) = "addFilter(language , 'language')" > {{language}}</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>

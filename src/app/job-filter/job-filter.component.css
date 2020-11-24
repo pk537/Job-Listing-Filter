@@ -1,0 +1,242 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Desaturated Dark Cyan: hsl(180, 29%, 50%)
+
+### Neutral
+
+- Light Grayish Cyan (Background): hsl(180, 52%, 96%)
+- Light Grayish Cyan (Filter Tablets): hsl(180, 31%, 95%)
+- Dark Grayish Cyan: hsl(180, 8%, 52%)
+- Very Dark Grayish Cyan: hsl(180, 14%, 20%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Headings
+
+- Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+- Weights: 500, 700 */
+
+html,body{
+    margin: 0;
+}
+body{
+    background-color: hsl(180, 52%, 96%);
+    font-family: url('https://fonts.google.com/specimen/Spartan'),sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: 155px;
+    background-image: url("../../assets/images/bg-header-desktop.svg");
+    background-size: cover;
+    background-position: center;
+    background-color: #5da4a4;
+}
+.container{
+    max-width: 1110px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+}
+.search{
+    width: 100%;
+    height: auto;
+    min-height: 70px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px -7px rgba(93,164,164,1);
+    padding: 20px 40px;
+    box-sizing: border-box;
+    margin-top: -36px;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.search_content{
+    float: left;
+}
+.close-tag{
+    display: inline-flex;
+    background-color: hsl(180, 31%, 95%) ;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius:5px ;
+    color:  hsl(180, 29%, 50%);
+    font-weight: bold;
+    margin: 10px;
+}
+.close-tag span{
+    padding: 10px;
+}
+button.close-tag{
+    background: none;
+    border: none;
+    font-size: 16px;
+    color:  hsl(180, 31%, 95%) ;
+    font-weight: bold;
+    cursor: pointer;
+}
+button.close-tag:hover {
+    text-decoration: underline;
+    color: hsl(180, 29%, 50%);
+}
+
+.search_clear{
+    margin-left: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    color: #40a5a4;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    align-self: center;
+}
+
+.search_clear:hover{
+    text-decoration: underline;
+}
+.jobs{
+    margin-top: 36px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 40px 35px;
+    box-shadow: 0px 10px 15px -7px rgba(93,164,164,1);
+    border-radius: 10px;
+}
+
+.jobs:hover{
+    border-left: solid 4px hsl(180, 29%, 50%);
+}
+.jobs_column{
+    display: flex;
+    align-items: center;
+}
+.jobs_img{
+    width: 90px;
+    height: auto;
+}
+.jobs_info{
+    margin-left: 25px;
+    width: auto;
+}
+.jobs_company{
+    color: #40a5a4;
+    font-size: 14px;
+    display: block;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.jobs_title{
+    color: hsl(180, 14%, 20%);
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 15px;
+}
+.jobs_details{
+    margin:0;
+    padding: 0;
+}
+.jobs_details_item{
+    display: inline-block;
+    color: hsl(180, 8%, 52%);
+}
+.jobs_details_item::after{
+    content: "";
+    width: 3px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: hsl(180, 8%, 52%);
+    display: inline-block;
+    margin: 5px 15px;
+    
+}
+.jobs_details_item:last-child::after{
+    display: none;
+}
+.search_tags{
+    float: right;
+}
+.tags{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 10px 15px;
+    border-radius: 5px ;
+    background-color: hsl(180, 31%, 95%);
+    font-size: 14px;
+    color: #40a5a4;
+    margin: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: relative;
+}
+
+
+/* button.close-tag{
+    padding: 5px 10px;
+    border: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius:5px ;             
+    cursor: pointer;
+    color: hsl(180, 31%, 95%);
+    background-color : hsl(180, 29%, 50%) ;
+}
+button.close-tag:hover {
+    background-color : hsl(180, 14%, 20%);
+} */
+/* .close-tag::after{
+    content: "";
+    display: block;
+    width:35px;
+    height: 100%;
+    background-color: #5da4a4;
+    position: absolute;
+    right: 0;
+    top:0;
+    background-image: url("../../assets/images/icon-remove.svg");
+    background-position: center;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    border-bottom-right-radius: 5px ;
+    border-top-right-radius: 5px ;
+} */
+
+button  {
+    width: auto;
+    height: auto;
+    margin: 5px;
+    background-color: hsl(180, 31%, 95%) ;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    color: hsl(180, 29%, 50%);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+button:hover {
+    color : hsl(180, 31%, 95%) ;
+    background-color : hsl(180, 29%, 50%);
+}
